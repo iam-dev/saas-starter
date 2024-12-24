@@ -1,0 +1,19 @@
+{
+  "name": "saas-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart:backend": "chmod +x backend/*.sh && pnpm install",
+    "start:backend": "bash backend/start-backend.sh",
+    "start:frontend": "cd frontend && pnpm dev",
+    "start:reactjs-boilerplate": "pnpm --filter reactjs-boilerplate dev",
+    "dev": "concurrently \"pnpm start:backend\" \"pnpm start:frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
